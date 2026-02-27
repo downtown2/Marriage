@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Book a Session | Marriage Catalyst</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="app.js"></script>
+</head>
+<body>
+<div class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html">
+      Marriage Catalyst
+      <small>Online marriage therapy</small>
+    </a>
+    <div class="nav-links">
+      <a data-nav href="index.html">Home</a>
+      <a data-nav href="about.html">About</a>
+      <a data-nav href="services.html">Services</a>
+      <a data-nav href="book.html">Book a Session</a>
+      <a data-nav href="contact.html">Contact</a>
+    </div>
+  </div>
+</div>
+<main class="container">
+  <section class="section">
+    <div class="kicker">Book a session</div>
+    <h2>Start with a quick intake</h2>
+    <p>
+      This goes to WhatsApp so you can reply quickly and then schedule the best time.
+    </p>
+  </section>
+  <section class="section">
+    <div class="card">
+      <form id="intakeForm" class="form">
+        <div class="field">
+          <label for="name">Full name</label>
+          <input id="name" name="name" placeholder="Your name" required />
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="you@email.com" />
+        </div>
+        <div class="field">
+          <label for="phone">WhatsApp/Phone</label>
+          <input id="phone" name="phone" placeholder="+234..." />
+        </div>
+        <div class="field">
+          <label for="session">Session type</label>
+          <select id="session" name="session">
+            <option value="Couples therapy">Couples therapy</option>
+            <option value="Pre-marital counseling">Pre-marital counseling</option>
+            <option value="Relationship coaching">Relationship coaching</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="days">Preferred days/times</label>
+          <input id="days" name="days" placeholder="e.g. Weeknights, Saturday mornings" />
+        </div>
+        <div class="field">
+          <label for="concern">Main concern (optional)</label>
+          <textarea id="concern" name="concern" placeholder="Tell me a little about what’s going on..."></textarea>
+        </div>
+        <button class="btn primary" type="submit">
+          Submit intake on WhatsApp
+        </button>
+        <div class="help">
+          By submitting, you’re opening WhatsApp to send the intake details.
+        </div>
+      </form>
+    </div>
+  </section>
+  <section class="section">
+    <div class="card">
+      <h2 style="margin:0 0 8px;">Then schedule a time</h2>
+      <p class="help">
+        If you use Calendly or Google Calendar booking, place your link below.
+      </p>
+      <div class="notice">
+        Replace the button link with your scheduler:
+        <br><br>
+        <a class="btn" href="https://calendly.com/" target="_blank" rel="noopener">
+          Open scheduling
+        </a>
+      </div>
+      <div class="help">
+        When you send your real scheduling link, we can plug it in here.
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="footer">
+  <div class="container">
+    © <span id="y"></span> Marriage Catalyst
+  </div>
+</footer>
+<script>
+  document.getElementById("y").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

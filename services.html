@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Services | Marriage Catalyst</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="app.js"></script>
+</head>
+<body>
+<div class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html">
+      Marriage Catalyst
+      <small>Online marriage therapy</small>
+    </a>
+    <div class="nav-links">
+      <a data-nav href="index.html">Home</a>
+      <a data-nav href="about.html">About</a>
+      <a data-nav href="services.html">Services</a>
+      <a data-nav href="book.html">Book a Session</a>
+      <a data-nav href="contact.html">Contact</a>
+    </div>
+  </div>
+</div>
+<main class="container">
+  <section class="section">
+    <div class="kicker">Services</div>
+    <h2>How we can work together</h2>
+    <p>
+      Choose what fits your season. If you’re not sure, book a session and we’ll decide together.
+    </p>
+  </section>
+  <section class="section grid-3">
+    <div class="card">
+      <h2 style="margin:0 0 8px;">Couples therapy</h2>
+      <p class="help">
+        For conflict, communication issues, intimacy challenges,
+        trust rebuilding, and reconnection.
+      </p>
+    </div>
+    <div class="card">
+      <h2 style="margin:0 0 8px;">Pre-marital counseling</h2>
+      <p class="help">
+        Build a strong foundation: values, expectations,
+        communication patterns, and future planning.
+      </p>
+    </div>
+    <div class="card">
+      <h2 style="margin:0 0 8px;">Relationship coaching</h2>
+      <p class="help">
+        Skill-focused support for couples who want structure and action steps.
+      </p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="card">
+      <h2 style="margin:0 0 8px;">What you’ll get</h2>
+      <ul class="list">
+        <li>Clear next steps after each session</li>
+        <li>Practical communication tools</li>
+        <li>A calm, respectful space</li>
+      </ul>
+      <div class="btns" style="margin-top:14px;">
+        <a class="btn primary" href="book.html">Book a session</a>
+        <a class="btn" data-whatsapp href="#">Ask on WhatsApp</a>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="footer">
+  <div class="container">
+    © <span id="y"></span> Marriage Catalyst
+  </div>
+</footer>
+<script>
+  document.getElementById("y").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact | Marriage Catalyst</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="app.js"></script>
+</head>
+<body>
+<div class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html">
+      Marriage Catalyst
+      <small>Online marriage therapy</small>
+    </a>
+    <div class="nav-links">
+      <a data-nav href="index.html">Home</a>
+      <a data-nav href="about.html">About</a>
+      <a data-nav href="services.html">Services</a>
+      <a data-nav href="book.html">Book a Session</a>
+      <a data-nav href="contact.html">Contact</a>
+    </div>
+  </div>
+</div>
+<main class="container">
+  <section class="section">
+    <div class="kicker">Contact</div>
+    <h2>Let’s connect</h2>
+    <p>
+      Have a question before booking? Reach out and we’ll respond as soon as possible.
+    </p>
+  </section>
+  <section class="section grid-2">
+    <div class="card">
+      <h2 style="margin:0 0 8px;">Direct Contact</h2>
+      <p class="help">Email: hello@marriagecatalyst.com</p>
+      <p class="help">Phone: +234 000 000 0000</p>
+      <div class="btns" style="margin-top:14px;">
+        <a class="btn primary" data-whatsapp href="#">Chat on WhatsApp</a>
+      </div>
+    </div>
+    <div class="card">
+      <h2 style="margin:0 0 8px;">Working Hours</h2>
+      <ul class="list">
+        <li>Monday – Friday: 9am – 6pm</li>
+        <li>Saturday: By appointment</li>
+        <li>Sunday: Closed</li>
+      </ul>
+    </div>
+  </section>
+</main>
+<footer class="footer">
+  <div class="container">
+    © <span id="y"></span> Marriage Catalyst
+  </div>
+</footer>
+<script>
+  document.getElementById("y").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
