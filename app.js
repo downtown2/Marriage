@@ -1,40 +1,59 @@
-function whatsappLink(numberE164, message){
-  const encoded = encodeURIComponent(message || "");
-  return `https://wa.me/${numberE164}?text=${encoded}`;
-}
-function setActiveNav(){
-  const path = (location.pathname.split("/").pop() || "index.html").toLowerCase();
-  document.querySelectorAll("[data-nav]").forEach(a=>{
-    const href = (a.getAttribute("href") || "").toLowerCase();
-    if(href === path) a.classList.add("active");
-  });
-}
-document.addEventListener("DOMContentLoaded", ()=>{
-  setActiveNav();
-  const waNumber = "2348130814626";
-  const defaultMsg =
-  "Hi, I’d like to book a marriage therapy session with Marriage Catalyst.";
-  document.querySelectorAll("[data-whatsapp]").forEach(el=>{
-    el.setAttribute("href", whatsappLink(waNumber, defaultMsg));
-    el.setAttribute("target","_blank");
-    el.setAttribute("rel","noopener");
-  });
-  const intakeForm = document.querySelector("#intakeForm");
-  if(intakeForm){
-    intakeForm.addEventListener("submit", (e)=>{
+// LOADER
+window.addEventListener("load", () => {
+  const loader = document.querySelector(".loader");
+  if(loader){
+    loader.classList.add("hidden");
+  }
+});
+
+// PAGE TRANSITION
+document.querySelectorAll("a").forEach(link => {
+  if(link.hostname === window.location.hostname){
+    link.addEventListener("click", function(e){
       e.preventDefault();
-      const data = Object.fromEntries(new FormData(intakeForm).entries());
-      const summary =
-`*New Intake Request — Marriage Catalyst*
-*Name:* ${data.name || ""}
-*Email:* ${data.email || ""}
-*Phone:* ${data.phone || ""}
-*Session Type:* ${data.session || ""}
-*Preferred Days:* ${data.days || ""}
-*Main Concern:*
-${data.concern || ""}`;
-      window.open(whatsappLink(waNumber, summary), "_blank", "noopener");
-      intakeForm.reset();
+      document.body.classList.add("fade-out");
+      setTimeout(() => {
+        window.location = this.href;
+      }, 400);
     });
   }
 });
+
+// AUTO YEAR
+const y = document.getElementById("y");
+if(y){
+  y.textContent = new Date().getFullYear();
+}
+
+// DARK MODE
+const toggle = document.getElementById("darkToggle");
+if(toggle){
+  toggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+    localStorage.setItem("darkMode",
+      document.body.classList.contains("dark"));
+  });
+
+  if(localStorage.getItem("darkMode") === "true"){
+    document.body.classList.add("dark");
+  }
+}
+
+// TESTIMONIAL SLIDER
+let slides = document.querySelectorAll(".slide");
+let index = 0;
+
+if(slides.length > 0){
+  slides[0].classList.add("active");
+
+  setInterval(() => {
+    slides[index].classList.remove("active");
+    index = (index + 1) % slides.length;
+    slides[index].classList.add("active");
+  }, 4000);
+}
+
+// PWA REGISTER
+if("serviceWorker" in navigator){
+  navigator.serviceWorker.register("sw.js");
+}

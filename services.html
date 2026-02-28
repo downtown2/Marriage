@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <link rel="manifest" href="manifest.json">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Services | Marriage Catalyst</title>
@@ -8,6 +9,9 @@
   <script defer src="app.js"></script>
 </head>
 <body>
+  <div class="loader">
+  <div class="spinner"></div>
+</div>
 <div class="nav">
   <div class="container nav-inner">
     <a class="brand" href="index.html">
@@ -76,5 +80,11 @@
 <script>
   document.getElementById("y").textContent = new Date().getFullYear();
 </script>
+<div class="bottom-nav">
+  <a href="index.html">🏠<span>Home</span></a>
+  <a href="services.html">💼<span>Services</span></a>
+  <a href="book.html">📅<span>Book</span></a>
+  <a href="contact.html">📞<span>Contact</span></a>
+</div>
 </body>
 </html>

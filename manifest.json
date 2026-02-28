@@ -1,0 +1,9 @@
+{
+  "name": "Marriage Catalyst",
+  "short_name": "Catalyst",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#6C63FF",
+  "icons": []
+}
