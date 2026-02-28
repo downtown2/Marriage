@@ -58,6 +58,25 @@ body{
   color:var(--text);
   font-size:14px;
   transition:.3s;
+  /* ========================= */
+/* MOBILE NAV CLEAN FIX */
+/* ========================= */
+
+@media(max-width:768px){
+
+  .nav-links{
+    display:none;
+  }
+
+  .nav{
+    padding:12px 0;
+  }
+
+  .brand{
+    font-size:20px;
+  }
+
+}
 }
 
 .nav-links a:hover{
